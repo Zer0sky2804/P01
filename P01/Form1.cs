@@ -16,5 +16,38 @@ namespace P01
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            textBox1.Text += (sender as Button).Text;
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            string pismena = "QERTYUIOPASDFGHJKLZXCVBNM.,?! ";
+            int i = 0;
+            foreach (Control ctrl in Controls)
+            {
+                if (ctrl is Button) (ctrl as Button).Text = pismena[i].ToString();
+                i++;
+            }
+        }
+
+        private void encode_Click(object sender, EventArgs e)
+        {
+            foreach (char value in textBox1.Text)
+            {
+                if (value != ' ' && value != ',' || value == '.' || value == '!' || value == '?')
+                {
+
+                }
+                else
+                {
+                    int ascii = Convert.ToInt32(value);
+                    ascii += 3;
+                    char znak = Convert.ToChar(ascii);
+                }
+            }
+        }
     }
 }

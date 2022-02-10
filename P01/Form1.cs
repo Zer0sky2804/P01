@@ -26,7 +26,7 @@ namespace P01
         {
             string pismena = "QERTYUIOPASDFGHJKLZXCVBNM.,?! ";
             int i = 0;
-            foreach (Control ctrl in Controls)
+            foreach (Control ctrl in panel1.Controls)
             {
                 if (ctrl is Button) (ctrl as Button).Text = pismena[i].ToString();
                 i++;
@@ -35,19 +35,19 @@ namespace P01
 
         private void encode_Click(object sender, EventArgs e)
         {
-            foreach (char value in textBox1.Text)
+            string chain = textBox1.Text;
+            string newchain = "";
+            for (int i = 0; i < textBox1.Text.Length; i++)
             {
-                if (value != ' ' && value != ',' || value == '.' || value == '!' || value == '?')
+                char value = chain[i];
+                if (value != ' ' && value != ',' && value != '.' && value != '!' && value != '?')
                 {
-
+                    int ascii = (int)value + 3;
+                    newchain += (char)ascii;
                 }
-                else
-                {
-                    int ascii = Convert.ToInt32(value);
-                    ascii += 3;
-                    char znak = Convert.ToChar(ascii);
-                }
+                else newchain += value; 
             }
+            textBox1.Text = newchain;
         }
     }
 }

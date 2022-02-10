@@ -156,9 +156,9 @@
             // 
             // button11
             // 
-            this.button11.Location = new System.Drawing.Point(174, 143);
+            this.button11.Location = new System.Drawing.Point(12, 172);
             this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(75, 23);
+            this.button11.Size = new System.Drawing.Size(480, 23);
             this.button11.TabIndex = 14;
             this.button11.UseVisualStyleBackColor = true;
             this.button11.Click += new System.EventHandler(this.button1_Click);
@@ -237,7 +237,7 @@
             // 
             // button20
             // 
-            this.button20.Location = new System.Drawing.Point(336, 27);
+            this.button20.Location = new System.Drawing.Point(174, 143);
             this.button20.Name = "button20";
             this.button20.Size = new System.Drawing.Size(75, 23);
             this.button20.TabIndex = 15;
@@ -327,9 +327,9 @@
             // 
             // button30
             // 
-            this.button30.Location = new System.Drawing.Point(12, 172);
+            this.button30.Location = new System.Drawing.Point(336, 27);
             this.button30.Name = "button30";
-            this.button30.Size = new System.Drawing.Size(480, 23);
+            this.button30.Size = new System.Drawing.Size(75, 23);
             this.button30.TabIndex = 25;
             this.button30.UseVisualStyleBackColor = true;
             this.button30.Click += new System.EventHandler(this.button1_Click);
@@ -356,6 +356,7 @@
             this.panel1.Controls.Add(this.button28);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.button26);
+            this.panel1.Controls.Add(this.button20);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button27);
             this.panel1.Controls.Add(this.button3);
@@ -382,7 +383,6 @@
             this.panel1.Controls.Add(this.button12);
             this.panel1.Controls.Add(this.button19);
             this.panel1.Controls.Add(this.button11);
-            this.panel1.Controls.Add(this.button20);
             this.panel1.Location = new System.Drawing.Point(35, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(510, 215);

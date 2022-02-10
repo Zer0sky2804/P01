@@ -63,8 +63,11 @@ namespace P01
                 if (value != ' ' && value != ',' && value != '.' && value != '!' && value != '?' && counter > 0)
                 {
                     int ascii;
-                    if (value <= 'C') ascii = (int)value + 26 - (counter * 3);
-                    else ascii = (int)value - counter * 3;
+                    if (value <= 'C') ascii = (int)value + 26 - (counter * 3) + (((counter * 3) / 26) * 26);
+                    else
+                    {
+                        ascii = (int)value - counter * 3 + (((counter * 3) / 26) * 26);
+                    }
                     newchain += (char)ascii;
                 }
                 else newchain += value;

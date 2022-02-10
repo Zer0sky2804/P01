@@ -32,9 +32,10 @@ namespace P01
                 i++;
             }
         }
-
+        int counter = 0;
         private void encode_Click(object sender, EventArgs e)
         {
+            counter++;
             string chain = textBox1.Text;
             string newchain = "";
             for (int i = 0; i < textBox1.Text.Length; i++)
@@ -42,12 +43,34 @@ namespace P01
                 char value = chain[i];
                 if (value != ' ' && value != ',' && value != '.' && value != '!' && value != '?')
                 {
-                    int ascii = (int)value + 3;
+                    int ascii;
+                    if (value >= 'X') ascii = (int)value - 26 + 3;
+                    else ascii = (int)value + 3;
                     newchain += (char)ascii;
                 }
                 else newchain += value; 
             }
             textBox1.Text = newchain;
+        }
+
+        private void decode_Click(object sender, EventArgs e)
+        {
+            string chain = textBox1.Text;
+            string newchain = "";
+            for (int i = 0; i < textBox1.Text.Length; i++)
+            {
+                char value = chain[i];
+                if (value != ' ' && value != ',' && value != '.' && value != '!' && value != '?' && counter > 0)
+                {
+                    int ascii;
+                    if (value <= 'C') ascii = (int)value + 26 - (counter * 3);
+                    else ascii = (int)value - counter * 3;
+                    newchain += (char)ascii;
+                }
+                else newchain += value;
+            }
+            textBox1.Text = newchain;
+            counter = 0;
         }
     }
 }

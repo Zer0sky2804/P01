@@ -52,9 +52,9 @@
             this.textBox1.Location = new System.Drawing.Point(426, 143);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(101, 40);
+            this.textBox1.Size = new System.Drawing.Size(101, 45);
             this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "8\r\n36";
+            this.textBox1.Text = "8\r\n36\r\n10";
             // 
             // label1
             // 
@@ -200,6 +200,7 @@
             this.button2.TabIndex = 0;
             this.button2.Text = "button2";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Form1
             // 

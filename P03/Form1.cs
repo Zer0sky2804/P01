@@ -17,44 +17,21 @@ namespace P03
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)
         {
-            Random rnd = new Random();
-            double ap = 0;
-            int p = 0;
-            foreach (Control ctrl in panel1.Controls)
+            int x = Convert.ToInt32(textBox1.Lines[0]);
+            int y = Convert.ToInt32(textBox1.Lines[1]);
+            int u = x;
+            int w = y;
+            int r;
+            while (w > 0)
             {
-                if (ctrl is TextBox)
-                {
-                    int a = rnd.Next(5, 21);
-                    (ctrl as TextBox).Text = ap.ToString();
-                    if (a % 7 == 0)
-                    {
-                        ap += a;
-                        p++;
-                    }
-                }
-                else { if (ctrl is RadioButton) {
-                        (ctrl as RadioButton).Checked = !(ctrl as RadioButton).Checked;
-                    }
-
-                    else { if (ctrl is Button){
-
-                        }
-                    } 
-                }
+                r = u % w;
+                u = w;
+                w = r;
             }
-            if (p != 0)
-            {
-                ap = ap / p;
-                label1.Text = "Aritmeticky prumer je " + ap;
-            }
-            else
-            {
-                label1.Text = "Aritmeticky prumer neexistuje.";
-            }
-            
-
+            int nsn = x * y / u;
+            MessageBox.Show(String.Format("NSD ({0}, {1}) = {2}\nNSN ({3}, {4}) = {5}", x, y, u, x, y, nsn));
         }
     }
 }

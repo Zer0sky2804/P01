@@ -50,9 +50,11 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(426, 143);
+            this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.Size = new System.Drawing.Size(101, 40);
             this.textBox1.TabIndex = 0;
+            this.textBox1.Text = "8\r\n36";
             // 
             // label1
             // 
@@ -71,7 +73,6 @@
             this.button1.TabIndex = 2;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // listBox1
             // 
@@ -179,6 +180,7 @@
             this.button4.TabIndex = 2;
             this.button4.Text = "button4";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 

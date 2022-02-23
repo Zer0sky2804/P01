@@ -56,16 +56,12 @@ namespace P03
                     if (ctrl is RadioButton)
                     {          
                     (ctrl as RadioButton).Enabled= !(ctrl as RadioButton).Enabled;
-                    }
-
+                    }   
               else
-                   
                         if (ctrl is Button)
                         {
 
-                        }
-                   
-                
+                        } 
             }
             if (p != 0)
             {
@@ -76,6 +72,11 @@ namespace P03
             {
                 label1.Text = "Aritmeticky prumer neexistuje.";
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

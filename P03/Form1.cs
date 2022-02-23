@@ -39,6 +39,7 @@ namespace P03
             Random rnd = new Random();
             double ap = 0;
             int p = 0;
+            int i = 1;
             foreach (Control ctrl in panel1.Controls)
             {
                 if (ctrl is TextBox)
@@ -60,10 +61,10 @@ namespace P03
 
               else
                    
-                        if (ctrl is Button)
-                        {
-
-                        }
+                   if (ctrl is Button){
+                    (ctrl as Button).Text = "T" + i.ToString();
+                    i++;
+                   }
                    
                 
             }
